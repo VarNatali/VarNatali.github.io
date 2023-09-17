@@ -1,0 +1,69 @@
+@mixin button_dr ($w, $h, $fw,$fs,$ls){
+    
+    width: $w;
+    height: $h;
+    border:0px;
+    color:$main_text_color;
+    background-color:$button_color;   
+    border-radius: $h*0.5;
+    display: flex;
+     justify-content: center;
+     text-align: center;
+     align-items: center;
+     font-size: $fs;
+     font-weight: $fw;
+     letter-spacing: $ls;   
+}
+
+@mixin button_dr_invers ($w, $h, $fw,$fs,$ls){
+    @include button_dr($w, $h, $fw,$fs,$ls);
+    background-color: $main_text_color; 
+    color:$button_color;
+    border:2px solid $button_color;
+}
+@mixin Small_Title($fw, $fs,$tc,$lh,$ls){
+                      font-weight: $fw;
+                       font-size: $fs;
+                       line-height:$lh;
+                       letter-spacing: $ls;
+                        text-decoration: none;
+                       
+                        font-family: 'Roboto', sans-serif;
+                        color:$tc;
+    
+}
+@mixin Content_Title($fw, $fs,$lh,$tc,$ls){
+                        font-size: $fs;
+                        font-weight: $fw;
+                        line-height: $lh;
+                        text-decoration: none; 
+                        letter-spacing: $ls;   
+                        font-family: 'Montserrat', sans-serif;
+                        color:$tc;
+                        
+    
+}
+@mixin Big_Title($fw, $fs,$tc,$lh,$ls){
+    
+    font-weight: $fw;
+    font-size: $fs;
+    justify-content: center;
+    line-height: $lh;
+    color:$tc;
+    letter-spacing: $ls;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+
+}
+@mixin Title_Box($mh){
+        height: $mh;
+        width: 100%;
+        display: flex;
+        
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+}
+
